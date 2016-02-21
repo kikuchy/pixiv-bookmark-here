@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	"version": "0.0.1",
+	"name": "pixiv-bookmark-here",
+	"description": "画面遷移なしでpixivのブックマークを可能にします",
+    "icons": {
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "permissions": [
+        "http://*.pixiv.net/"
+    ],
+	"content_scripts": [{
+		"run_at": "document_start",
+		"js": ["output/browserify.js"],
+		"matches": [
+			"http://www.pixiv.net/member_illust.php?*"
+		]
+	}]
+}

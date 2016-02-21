@@ -1,0 +1,29 @@
+{
+  "name": "pixiv-bookmark-here",
+  "version": "0.0.1",
+  "description": "画面遷移なしでpixivのブックマークを可能にします",
+  "main": "./gulpfile",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir dest && pulp browserify -O --to dest/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-zip": "^3.2.0"
+  },
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp-debug": "^2.1.2",
+    "gulp-purescript": "^0.8.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-run": "^1.6.12",
+    "gulp-util": "^3.0.7",
+    "merge-stream": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
