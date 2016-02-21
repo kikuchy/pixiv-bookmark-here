@@ -27,10 +27,10 @@ gulp.task('build', ['clean'], function () {
         gulp.src(['manifest.json']).pipe(
             gulp.dest('dest/')
         ),
-        run('pulp browserify -O').exec().pipe(debug({title: "hoge"})).pipe(rename(function (path) {
+        run('pulp browserify -O').exec().pipe(rename(function (path) {
             path.basename = "index.js";
             return path;
-        })).pipe(debug({title: "fuga"})).pipe(
+        })).pipe(
             gulp.dest('dest/')
         )
     );
